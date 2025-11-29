@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="container">
+
+    <!-- Left: Name -->
+    <div class="logo">
+      <span class="gradient-text">Yeswanth kumar sinisetti</span>
+    </div>
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav [class.active]="menuOpen" class="nav">
+      <a routerLink="/" fragment="home" (click)="scrollTo('home')">Home</a>
+      <a routerLink="/" fragment="skills" (click)="scrollTo('skills')">Skills</a>
+      <a routerLink="/" fragment="projects" (click)="scrollTo('projects')">Projects</a>
+      <a routerLink="/" fragment="experience" (click)="scrollTo('experience')">Experience</a>
+      <a routerLink="/" fragment="contact" (click)="scrollTo('contact')">Contact</a>
+    </nav>
+
+    <!-- Right Side Icons -->
+    <div class="icons">
+      <a href="https://github.com/ysinisetti" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/yeswanth-kumar-dev" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:syeswanthkumar1997@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+
+  </div>
+</header>

@@ -1,0 +1,107 @@
+/* Header container */
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo gradient */
+.logo .gradient-text {
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #8a2be2, #1e90ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Desktop Navigation */
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #1e90ff;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  gap: 18px;
+  font-size: 20px;
+}
+
+.icons a {
+  color: #555;
+  transition: 0.3s;
+}
+
+.icons a:hover {
+  color: #1e90ff;
+}
+
+/* Hamburger icon - hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ---------- RESPONSIVE PART ---------- */
+
+@media (max-width: 900px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide desktop menu */
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* When menu is active */
+  .nav.active {
+    display: flex;
+  }
+
+  /* Icons move inside mobile menu */
+  .icons {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo .gradient-text {
+    font-size: 18px;
+  }
+}
